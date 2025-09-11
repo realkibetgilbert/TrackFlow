@@ -1,0 +1,16 @@
+<div>
+  <h3>Live Location</h3>
+  <div *ngIf="location; else noData">
+    <p>Device: {{ location.deviceId }}</p>
+    <p>Lat: {{ location.latitude }} Long: {{ location.longitude }}</p>
+    <p>At: {{ location.timestamp | date:'medium' }}</p>
+  </div>
+  <ng-template #noData><p>No live data yet</p></ng-template>
+
+  <h4>History</h4>
+  <ul>
+    <li *ngFor="let h of history">
+      {{ h.timestamp | date:'medium' }} — {{ h.latitude }}, {{ h.longitude }}
+    </li>
+  </ul>
+</div>

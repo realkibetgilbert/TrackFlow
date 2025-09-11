@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.5.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrackflowSimulator.Console.Application\TrackflowSimulator.Console.Application.csproj" />
+    <ProjectReference Include="..\TrackflowSimulator.Console.Core\TrackflowSimulator.Console.Core.csproj" />
+    <ProjectReference Include="..\TrackflowSimulator.Console.Infrastructure\TrackflowSimulator.Console.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Trackflow.Contracts">
+      <HintPath>..\..\Trackflow.Contracts\Trackflow.Contracts\bin\Debug\net8.0\Trackflow.Contracts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

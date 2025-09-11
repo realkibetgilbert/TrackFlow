@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrackflowSimulator.Console.Core\TrackflowSimulator.Console.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Trackflow.Contracts">
+      <HintPath>..\..\Trackflow.Contracts\Trackflow.Contracts\bin\Debug\net8.0\Trackflow.Contracts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
